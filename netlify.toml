@@ -1,0 +1,3 @@
+[build]
+  publish = "bomulseom"
+  functions = "netlify/functions"
