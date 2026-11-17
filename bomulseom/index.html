@@ -271,6 +271,7 @@ input.big{font-size:28px;text-align:center;font-family:Jua}
 .score .btn.col{background:var(--c,#3F82F0)}.score .sbtns .btn{width:100%}.sbtns{display:flex;flex-direction:column;gap:10px;margin-top:18px}
 @keyframes pop{0%{transform:scale(.3);opacity:0}100%{transform:scale(1);opacity:1}}
 .upick{max-height:56vh;overflow:auto;display:grid;gap:6px}.upick .uhd{font-weight:800;color:var(--muted);margin-top:8px;font-size:14px}.upick button{text-align:left;font:inherit;padding:10px 12px;border-radius:12px;border:2px solid var(--line);background:#fff;cursor:pointer}.upick button.on{border-color:var(--ink);background:#FFF6DA;font-weight:800}
+.bx{display:inline-block;width:1.15em;height:1.25em;border:3px solid #F2A33A;border-radius:7px;background:#FFF6DA;vertical-align:-0.25em;margin:0 3px}.passage .bx{width:3.2em}
 </style></head><body><div id="app"></div><script type="application/json" id="state">{"v":1,"children":[{"id":"c1","name":"헌집서","emoji":"🐯","level":"g1","birth":2019,"adj":0},{"id":"c2","name":"웅쨍","emoji":"🐰","level":"k5","birth":2021,"adj":0}],"tests":{},"daily":{},"nav":null,"updated":0}</script><script id="app-script">
 (function(){
 'use strict';
@@ -321,7 +322,7 @@ var SPELL=[[1,2,'놀이터',['노리터','놀이털']],[1,2,'웃음',['우슴','
 [2,3,'같이',['가치','갇이']],[2,3,'해돋이',['해도지','해돗이']],[2,3,'읽어요',['일거요','읽거요']],[2,4,'깨끗이',['깨끗히','깨끄시']],[2,3,'선생님',['선샘님','선생림']],[2,3,'많이',['마니','만히']],[2,3,'앉아요',['안자요','앉자요']],[2,4,'닭이',['달기','닥이']],
 [3,4,'굳이',['구지','궂이']],[3,4,'며칠',['몇일','몇칠']],[3,4,'설거지',['설겆이','설거찌']],[3,4,'금세',['금새','끔세']],[3,4,'할게요',['할께요','할개요']],[3,4,'어떡해',['어떻해','어덕해']],[3,4,'안 돼요',['안 되요','안 대요']],[3,4,'깊이',['기피','깊히']]];
 var ANT=[['크다','작다',0],['길다','짧다',0],['위','아래',0],['앞','뒤',0],['열다','닫다',0],['웃다','울다',0],['들어가다','나오다',1],['새것','헌것',1],['깨끗하다','더럽다',1],['춥다','덥다',0],['많다','적다',1],['높다','낮다',1],['뜨겁다','차갑다',1],['빠르다','느리다',1],['무겁다','가볍다',2],['넓다','좁다',2],['밝다','어둡다',2],['가깝다','멀다',2],['쉽다','어렵다',2],['깊다','얕다',3],['두껍다','얇다',3],['굵다','가늘다',4]];
-var ONO=[['아기가 ( ) 잠을 자요.','새근새근'],['비가 ( ) 내려요.','주룩주룩'],['토끼가 ( ) 뛰어요.','깡충깡충'],['별이 ( ) 빛나요.','반짝반짝'],['거북이가 ( ) 기어가요.','엉금엉금'],['공이 ( ) 굴러가요.','데굴데굴'],['나비가 ( ) 날아가요.','훨훨'],['돼지가 ( ) 울어요.','꿀꿀'],['오리가 ( ) 울어요.','꽥꽥'],['시계가 ( ) 가요.','똑딱똑딱'],['강아지가 ( ) 짖어요.','멍멍'],['병아리가 ( ) 울어요.','삐약삐약'],['접시가 ( ) 깨졌어요.','쨍그랑'],['시냇물이 ( ) 흘러요.','졸졸'],['문을 ( ) 두드려요.','똑똑'],['뱀이 ( ) 기어가요.','스르르'],['바람이 ( ) 불어요.','쌩쌩'],['배가 고파서 ( ) 소리가 나요.','꼬르륵'],['개구리가 ( ) 울어요.','개굴개굴'],['오리가 ( ) 걸어가요.','뒤뚱뒤뚱'],['눈이 ( ) 내려요.','펑펑'],['아이가 ( ) 웃어요.','방긋방긋'],['참새가 ( ) 지저귀어요.','짹짹'],['자동차가 ( ) 경적을 울려요.','빵빵'],['고양이가 ( ) 울어요.','야옹']];
+var ONO=[['아기가 <i class="bx"></i> 잠을 자요.','새근새근'],['비가 <i class="bx"></i> 내려요.','주룩주룩'],['토끼가 <i class="bx"></i> 뛰어요.','깡충깡충'],['별이 <i class="bx"></i> 빛나요.','반짝반짝'],['거북이가 <i class="bx"></i> 기어가요.','엉금엉금'],['공이 <i class="bx"></i> 굴러가요.','데굴데굴'],['나비가 <i class="bx"></i> 날아가요.','훨훨'],['돼지가 <i class="bx"></i> 울어요.','꿀꿀'],['오리가 <i class="bx"></i> 울어요.','꽥꽥'],['시계가 <i class="bx"></i> 가요.','똑딱똑딱'],['강아지가 <i class="bx"></i> 짖어요.','멍멍'],['병아리가 <i class="bx"></i> 울어요.','삐약삐약'],['접시가 <i class="bx"></i> 깨졌어요.','쨍그랑'],['시냇물이 <i class="bx"></i> 흘러요.','졸졸'],['문을 <i class="bx"></i> 두드려요.','똑똑'],['뱀이 <i class="bx"></i> 기어가요.','스르르'],['바람이 <i class="bx"></i> 불어요.','쌩쌩'],['배가 고파서 <i class="bx"></i> 소리가 나요.','꼬르륵'],['개구리가 <i class="bx"></i> 울어요.','개굴개굴'],['오리가 <i class="bx"></i> 걸어가요.','뒤뚱뒤뚱'],['눈이 <i class="bx"></i> 내려요.','펑펑'],['아이가 <i class="bx"></i> 웃어요.','방긋방긋'],['참새가 <i class="bx"></i> 지저귀어요.','짹짹'],['자동차가 <i class="bx"></i> 경적을 울려요.','빵빵'],['고양이가 <i class="bx"></i> 울어요.','야옹']];
 var HON=[['밥','진지'],['집','댁'],['나이','연세'],['말','말씀'],['자다','주무시다'],['있다','계시다'],['먹다','드시다'],['아프다','편찮으시다'],['생일','생신'],['이름','성함'],['묻다','여쭙다'],['주다','드리다'],['데리고','모시고'],['말하다','말씀하시다'],['사람','분'],['죽다','돌아가시다']];
 var READ=[[0,1,'토끼가 당근을 먹어요. 당근은 주황색이에요. 토끼는 기분이 좋아요.','토끼가 먹은 것은 무엇인가요?',['당근','사과','풀','빵']],
 [0,1,'비가 와요. 민지는 노란 우산을 썼어요. 장화도 신었어요.','민지의 우산은 무슨 색인가요?',['노란색','빨간색','파란색','초록색']],
@@ -383,21 +384,21 @@ var SCI=[
 ['earth',4,4,'지구 표면에서 더 넓은 곳은?',['바다','육지','둘이 똑같아요','사막'],'지구 표면의 약 70%는 바다예요.']];
 var SENT=[
 [1,3,'문장을 바르게 끝맺은 것은 무엇일까요?',['나는 밥을 먹었어요.','나는 밥을 먹었어요를.','나는 밥을','밥을 먹었어요 나는를.']],
-[1,3,'빈칸에 알맞은 말은? "나는 친구( ) 같이 놀았어요."',['와','를','이','에서']],
+[1,3,'빈칸에 알맞은 말은? "나는 친구<i class="bx"></i> 같이 놀았어요."',['와','를','이','에서']],
 [1,2,'"누가 무엇을 하나요?"에 맞게 쓴 문장은?',['강아지가 공을 굴려요.','강아지 공','공을 데굴데굴','굴려요 빨리']],
-[1,2,'빈칸에 알맞은 말은? "고양이( ) 우유를 마셔요."',['가','를','와','에']],
+[1,2,'빈칸에 알맞은 말은? "고양이<i class="bx"></i> 우유를 마셔요."',['가','를','와','에']],
 [2,4,'문장 부호를 바르게 쓴 것은?',['너는 어디에 가니?','너는 어디에 가니.','너는, 어디에 가니','너는 어디에, 가니,']],
 [2,4,'띄어쓰기를 바르게 한 것은?',['나는 학교에 갑니다.','나는학교에 갑니다.','나는 학교 에 갑니다.','나 는 학교에갑니다.']],
 [3,4,'꾸며 주는 말이 들어 있는 문장은?',['빨간 사과가 맛있어요.','사과가 있어요.','나는 먹어요.','동생이 자요.']],
 [3,4,'"비가 왔어요. 그래서 소풍을 못 갔어요."를 한 문장으로 바르게 이은 것은?',['비가 와서 소풍을 못 갔어요.','비가 왔지만 소풍을 못 갔어요.','비가 오면 소풍을 갔어요.','비가 오고 소풍을 갔어요.']],
 [4,4,'높임 표현을 바르게 쓴 문장은?',['할머니께서 진지를 드세요.','할머니가 밥을 먹어.','할머니께서 밥을 먹니?','할머니는 진지를 먹어.']]];
-var CONN=[['비가 왔어요. ( ) 우산을 썼어요.','그래서',['그런데','하지만','왜냐하면']],['놀고 싶었어요. ( ) 숙제가 많았어요.','하지만',['그래서','그리고','왜냐하면']],['나는 사과를 좋아해요. ( ) 바나나도 좋아해요.','그리고',['하지만','그래서','왜냐하면']],['오늘은 일찍 잘 거예요. ( ) 내일 소풍을 가기 때문이에요.','왜냐하면',['그래서','그리고','하지만']],['열심히 연습했어요. ( ) 줄넘기를 100번 넘었어요.','그래서',['하지만','왜냐하면','그런데']]];
+var CONN=[['비가 왔어요. <i class="bx"></i> 우산을 썼어요.','그래서',['그런데','하지만','왜냐하면']],['놀고 싶었어요. <i class="bx"></i> 숙제가 많았어요.','하지만',['그래서','그리고','왜냐하면']],['나는 사과를 좋아해요. <i class="bx"></i> 바나나도 좋아해요.','그리고',['하지만','그래서','왜냐하면']],['오늘은 일찍 잘 거예요. <i class="bx"></i> 내일 소풍을 가기 때문이에요.','왜냐하면',['그래서','그리고','하지만']],['열심히 연습했어요. <i class="bx"></i> 줄넘기를 100번 넘었어요.','그래서',['하지만','왜냐하면','그런데']]];
 var SEQS=[['씨앗을 심어요','물을 줘요','싹이 나요','꽃이 펴요'],['아침에 일어나요','세수를 해요','아침밥을 먹어요','학교에 가요'],['손을 씻어요','밥을 먹어요','이를 닦아요','잠을 자요'],['개구리가 알을 낳아요','올챙이가 나와요','뒷다리가 나와요','개구리가 돼요'],['눈을 뭉쳐요','눈덩이를 굴려요','눈덩이 두 개를 쌓아요','눈·코·입을 붙여요'],['옷을 벗어요','몸을 씻어요','수건으로 닦아요','잠옷을 입어요']];
 var REASON=[
 [0,2,'추운 겨울에 밖에 나갈 때 두꺼운 옷을 입는 까닭은?',['몸을 따뜻하게 하려고','더워서','눈을 먹으려고','잠을 자려고']],
 [0,2,'친구가 넘어져서 울고 있어요. 어떻게 하면 좋을까요?',['괜찮은지 물어보고 도와줘요','모른 척 지나가요','크게 웃어요','혼자 놀러 가요']],
 [0,1,'비가 오면 왜 우산을 쓸까요?',['옷이 젖지 않게 하려고','해를 보려고','노래하려고','배가 고파서']],
-[1,3,'"나는 강아지가 좋아요. 왜냐하면 ( )" 빈칸에 알맞은 말은?',['꼬리를 흔들며 나를 반겨 주기 때문이에요.','강아지는 동물이에요.','고양이도 있어요.','어제 비가 왔어요.']],
+[1,3,'"나는 강아지가 좋아요. 왜냐하면 <i class="bx"></i>" 빈칸에 알맞은 말은?',['꼬리를 흔들며 나를 반겨 주기 때문이에요.','강아지는 동물이에요.','고양이도 있어요.','어제 비가 왔어요.']],
 [1,3,'동생이 내 장난감을 망가뜨렸어요. 가장 알맞은 행동은?',['속상한 마음을 말로 차분히 전해요','동생 장난감을 똑같이 망가뜨려요','소리를 지르며 울어요','아무 말 없이 밀쳐요']],
 [2,4,'"생각"과 "까닭"이 모두 들어 있는 것은?',['운동을 해야 해요. 몸이 튼튼해지기 때문이에요.','운동장이 넓어요.','나는 공을 찼어요.','오늘은 월요일이에요.']],
 [3,4,'"교실에서 뛰면 안 돼요."라는 생각에 알맞은 까닭은?',['부딪혀서 다칠 수 있기 때문이에요.','교실이 크기 때문이에요.','뛰는 것은 재미있어요.','운동장은 밖에 있어요.']],
@@ -564,28 +565,28 @@ SPELL=SPELL.concat([
 var CATG=[['과일',['사과','배','포도','귤','딸기','수박','참외','복숭아']],['동물',['사자','토끼','기린','코끼리','고양이','다람쥐','여우','호랑이']],['탈것',['버스','기차','자전거','비행기','헬리콥터','자동차','택시','지하철']],['채소',['오이','당근','배추','양파','감자','시금치','무','호박']],['학용품',['연필','지우개','공책','자','가위','풀','크레파스','필통']],['악기',['피아노','북','기타','바이올린','캐스터네츠','탬버린','리코더','트라이앵글']],['색깔',['빨강','파랑','노랑','초록','보라','주황','분홍','하양']],['날씨',['맑음','흐림','비','눈','바람','안개','소나기','천둥']]];
 var SYN=[['기쁘다','즐겁다',2],['예쁘다','아름답다',2],['많다','넉넉하다',3],['빠르다','재빠르다',3],['걱정하다','염려하다',4],['참다','견디다',4],['살펴보다','관찰하다',4],['고치다','수리하다',4],['차갑다','시원하다',2],['웃다','미소 짓다',3],['크다','커다랗다',1],['작다','조그맣다',1],['슬프다','서글프다',2],['화나다','성나다',2],['무섭다','두렵다',2],['고맙다','감사하다',1],['달리다','뛰다',1],['말하다','이야기하다',1],['모으다','모집하다',4],['착하다','어질다',3],['배고프다','시장하다',3],['깨끗하다','청결하다',4],['친구','동무',2],['모두','다',1],['조금','약간',2],['얼른','빨리',1],['살짝','가만히',2],['넓다','드넓다',2]];
 SENT=SENT.concat([
-[0,1,'그림 🐶 + "강아지가 ( )" 빈칸에 알맞은 말은?',['멍멍 짖어요','야옹 울어요','꽥꽥 울어요','음매 울어요']],
-[1,2,'"나는 우유를 ( )." 빈칸에 알맞은 말은?',['마셔요','입어요','타요','읽어요']],
-[1,2,'"동생이 그네를 ( )." 빈칸에 알맞은 말은?',['타요','먹어요','써요','씻어요']],
-[1,3,'"어제 나는 공원에 ( )." 빈칸에 알맞은 말은?',['갔어요','갈 거예요','가요','가겠어요']],
-[2,3,'"내일 우리는 동물원에 ( )." 빈칸에 알맞은 말은?',['갈 거예요','갔어요','갔었어요','가 버렸어요']],
+[0,1,'그림 🐶 + "강아지가 <i class="bx"></i>" 빈칸에 알맞은 말은?',['멍멍 짖어요','야옹 울어요','꽥꽥 울어요','음매 울어요']],
+[1,2,'"나는 우유를 <i class="bx"></i>." 빈칸에 알맞은 말은?',['마셔요','입어요','타요','읽어요']],
+[1,2,'"동생이 그네를 <i class="bx"></i>." 빈칸에 알맞은 말은?',['타요','먹어요','써요','씻어요']],
+[1,3,'"어제 나는 공원에 <i class="bx"></i>." 빈칸에 알맞은 말은?',['갔어요','갈 거예요','가요','가겠어요']],
+[2,3,'"내일 우리는 동물원에 <i class="bx"></i>." 빈칸에 알맞은 말은?',['갈 거예요','갔어요','갔었어요','가 버렸어요']],
 [2,4,'묻는 문장은 무엇일까요?',['너는 무엇을 좋아하니?','나는 사과를 좋아해.','사과를 먹자.','사과가 정말 맛있구나!']],
 [2,4,'느낌을 나타내는 문장은 무엇일까요?',['와, 하늘이 정말 파랗구나!','하늘은 무슨 색이니?','하늘을 보자.','하늘은 파랗다.']],
-[3,4,'"선생님께서 교실에 ( )." 빈칸에 알맞은 높임 표현은?',['오셨어요','왔어','와','왔다']],
+[3,4,'"선생님께서 교실에 <i class="bx"></i>." 빈칸에 알맞은 높임 표현은?',['오셨어요','왔어','와','왔다']],
 [3,4,'문장의 짜임이 "무엇이 + 어떠하다"인 것은?',['꽃이 예뻐요.','꽃이 피어요.','나는 꽃을 꺾어요.','꽃은 식물이에요.']],
 [4,4,'다음 중 흉내 내는 말을 바르게 쓴 문장은?',['아기가 아장아장 걸어요.','아기가 쿵쿵 자요.','아기가 펄펄 웃어요.','아기가 주룩주룩 걸어요.']]]);
 REASON=REASON.concat([
 [0,1,'길을 건널 때 초록불을 기다리는 까닭은?',['차에 부딪히지 않고 안전하게 건너려고','신호등이 예뻐서','빨리 달리려고','친구를 만나려고']],
 [0,2,'장난감을 다 가지고 논 다음에 정리하는 까닭은?',['다음에 찾기 쉽고 밟아 다치지 않으려고','장난감이 싫어서','엄마가 놀아 주려고','더러워지게 하려고']],
 [1,2,'친구가 아끼는 연필을 빌려주었어요. 알맞은 말은?',['고마워, 잘 쓰고 돌려줄게.','이거 내 거야.','필요 없어.','왜 이것밖에 없어?']],
-[1,3,'"나는 겨울이 좋아요. 왜냐하면 ( )" 빈칸에 알맞은 말은?',['눈사람을 만들 수 있기 때문이에요.','여름은 더워요.','눈은 하얘요.','오늘은 월요일이에요.']],
+[1,3,'"나는 겨울이 좋아요. 왜냐하면 <i class="bx"></i>" 빈칸에 알맞은 말은?',['눈사람을 만들 수 있기 때문이에요.','여름은 더워요.','눈은 하얘요.','오늘은 월요일이에요.']],
 [2,3,'도서관에서 큰 소리로 떠들면 안 되는 까닭은?',['다른 사람이 책 읽는 데 방해가 되어서','책이 무서워해서','목이 아파서','도서관이 넓어서']],
 [2,4,'"반려동물을 키우면 좋은 점"으로 알맞지 않은 것은?',['매일 먹이를 챙겨야 해요.','외롭지 않아요.','책임감이 생겨요.','함께 산책하며 운동할 수 있어요.']],
 [3,4,'"학교 급식을 남기지 말자."라는 주장에 알맞은 까닭은?',['음식물 쓰레기가 줄고 골고루 먹을 수 있어요.','급식실이 넓어요.','급식은 공짜예요.','점심시간이 짧아요.']],
 [3,4,'의견과 사실을 구분할 때, "의견"에 해당하는 것은?',['떡볶이가 세상에서 제일 맛있어요.','떡볶이는 떡으로 만들어요.','떡볶이는 빨간색이에요.','떡볶이는 그릇에 담아요.']],
 [4,4,'"교실에 화분을 두자."라는 의견의 까닭으로 가장 알맞은 것은?',['식물이 공기를 맑게 하고 마음을 편하게 해 줘요.','화분은 무거워요.','화분은 깨질 수 있어요.','식물은 물을 먹어요.']],
 [4,4,'글쓴이의 주장을 뒷받침하는 까닭이 아닌 것은? 주장: "계단에서 뛰지 말자."',['계단은 학교마다 있어요.','넘어지면 크게 다칠 수 있어요.','다른 친구와 부딪힐 수 있어요.','미끄러져 굴러떨어질 수 있어요.']]]);
-CONN=CONN.concat([['배가 고팠어요. ( ) 밥을 많이 먹었어요.','그래서',['하지만','왜냐하면','그런데']],['동생은 키가 작아요. ( ) 나는 키가 커요.','하지만',['그래서','왜냐하면','그러므로']],['우산을 챙겼어요. ( ) 비가 올 것 같았기 때문이에요.','왜냐하면',['그래서','하지만','그리고']],['아침을 먹었어요. ( ) 이를 닦았어요.','그리고',['하지만','왜냐하면','그러나']],['열심히 달렸어요. ( ) 버스를 놓쳤어요.','하지만',['그래서','그리고','왜냐하면']]]);
+CONN=CONN.concat([['배가 고팠어요. <i class="bx"></i> 밥을 많이 먹었어요.','그래서',['하지만','왜냐하면','그런데']],['동생은 키가 작아요. <i class="bx"></i> 나는 키가 커요.','하지만',['그래서','왜냐하면','그러므로']],['우산을 챙겼어요. <i class="bx"></i> 비가 올 것 같았기 때문이에요.','왜냐하면',['그래서','하지만','그리고']],['아침을 먹었어요. <i class="bx"></i> 이를 닦았어요.','그리고',['하지만','왜냐하면','그러나']],['열심히 달렸어요. <i class="bx"></i> 버스를 놓쳤어요.','하지만',['그래서','그리고','왜냐하면']]]);
 SEQS=SEQS.concat([['빵에 잼을 발라요','빵을 덮어요','반으로 잘라요','맛있게 먹어요'],['장갑을 껴요','눈을 뭉쳐요','눈싸움을 해요','젖은 장갑을 말려요'],['애벌레가 알에서 나와요','잎을 먹고 자라요','번데기가 돼요','나비가 돼요'],['우유를 컵에 따라요','컵을 들어요','우유를 마셔요','빈 컵을 씻어요']]);
 
 /* ---------- 영어 ---------- */
@@ -633,7 +634,7 @@ G.kor.vocab=function(r,lv){var types=['ant','ono','cat'];if(lv>=2)types.push('sy
  if(t==='cat'){var g=pick(r,CATG);var other=pick(r,CATG.filter(function(x){return x!==g;}));var odd=pick(r,other[1].filter(function(z){return g[1].indexOf(z)<0;}));return mk(r,'kor','vocab','다음 중 <b>'+jo(g[0],'이','가')+'</b> 아닌 것은?',odd,shuffle(r,g[1]).slice(0,3));}
  if(t==='syn'){var sp=SYN.filter(function(x){return x[2]<=lv;});if(sp.length){var y=pick(r,sp);var wr=shuffle(r,SYN.filter(function(x){return x!==y;}).map(function(x){return x[1];}).concat(ANT.map(function(x){return x[1];})));return mk(r,'kor','vocab','「<b>'+y[0]+'</b>」와 뜻이 비슷한 말은?',y[1],wr);}t='ant';}
  if(t==='ant'){var pool=ANT.filter(function(x){return x[2]<=lv;});var p=pick(r,pool);var rev=r()<.5;var a=rev?p[1]:p[0],b=rev?p[0]:p[1];var wr=shuffle(r,ANT.filter(function(x){return x!==p;}).map(function(x){return x[r()<.5?0:1];})).slice(0,3);return mk(r,'kor','vocab','「<b>'+a+'</b>」의 반대말은 무엇일까요?',b,wr);}
- if(t==='ono'){var o=pick(r,ONO);var wr2=shuffle(r,ONO.filter(function(x){return x!==o;}).map(function(x){return x[1];}));return mk(r,'kor','vocab','( )에 알맞은 흉내 내는 말은?<div class="passage" style="margin-top:10px">'+o[0]+'</div>',o[1],wr2);}
+ if(t==='ono'){var o=pick(r,ONO);var wr2=shuffle(r,ONO.filter(function(x){return x!==o;}).map(function(x){return x[1];}));return mk(r,'kor','vocab','빈칸에 알맞은 흉내 내는 말은?<div class="passage" style="margin-top:10px">'+o[0]+'</div>',o[1],wr2);}
  var h=pick(r,HON);var wr3=shuffle(r,HON.filter(function(x){return x!==h;}).map(function(x){return x[1];}));return mk(r,'kor','vocab','어른께 쓰는 「<b>'+h[0]+'</b>」의 높임말은?',h[1],wr3);};
 G.kor.read=function(r,lv){var p=pick(r,READ.filter(function(x){return x[0]<=lv&&lv<=x[1];}));return mk(r,'kor','read','<div class="passage">'+p[2]+'</div>'+p[3],p[4][0],p[4].slice(1),{speak:p[2]+' '+p[3]});};
 
@@ -692,7 +693,7 @@ G.math.word=function(r,lv){var N=pick(r,NAMES),N2=pick(r,NAMES.filter(function(x
 ['animal','plant','body','weather','matter','earth'].forEach(function(k){G.sci[k]=function(r,lv){var pool=SCI.filter(function(x){return x[0]===k&&x[1]<=lv&&lv<=x[2];});if(!pool.length)return null;var it=pick(r,pool);return mk(r,'sci',k,it[3],it[4][0],it[4].slice(1),{explain:it[5]});};});
 
 G.write.sentence=function(r,lv){var it=pick(r,SENT.filter(function(x){return x[0]<=lv&&lv<=x[1];}));return mk(r,'write','sentence',it[2],it[3][0],it[3].slice(1));};
-G.write.order=function(r,lv){if(lv>=2&&r()<.45){var c=pick(r,CONN);return mk(r,'write','order','( )에 알맞은 이어 주는 말은?<div class="passage" style="margin-top:10px">'+c[0]+'</div>',c[1],c[2]);}
+G.write.order=function(r,lv){if(lv>=2&&r()<.45){var c=pick(r,CONN);return mk(r,'write','order','빈칸에 알맞은 이어 주는 말은?<div class="passage" style="margin-top:10px">'+c[0]+'</div>',c[1],c[2]);}
  var seq=pick(r,SEQS);var k=lv<=1?3:4;var steps=seq.slice(0,k);var LB=['㉠','㉡','㉢','㉣'];var sh=shuffle(r,steps);var lab={};sh.forEach(function(s,i){lab[s]=LB[i];});var correct=steps.map(function(s){return lab[s];}).join(' → ');var wr=[];var g=0;while(wr.length<3&&g<40){g++;var p=shuffle(r,steps).map(function(s){return lab[s];}).join(' → ');if(p!==correct&&wr.indexOf(p)<0)wr.push(p);}
  return mk(r,'write','order','일이 일어난 순서대로 바르게 놓은 것은?<div class="steps">'+sh.map(function(s){return '<div>'+lab[s]+' '+s+'</div>';}).join('')+'</div>',correct,wr,{speak:'일이 일어난 순서대로 바르게 놓은 것을 고르세요. '+sh.map(function(s){return lab[s]+', '+s;}).join('. ')});};
 G.write.reason=function(r,lv){var it=pick(r,REASON.filter(function(x){return x[0]<=lv&&lv<=x[1];}));return mk(r,'write','reason',it[2],it[3][0],it[3].slice(1));};
@@ -707,9 +708,9 @@ G.eng.alpha=function(r,lv){var t=pick(r,lv===0?['hear','order','hear']:['hear','
  if(up){var w=(conf[l]||[]).concat(letters(r,L,3,true));return mk(r,'eng','alpha','대문자 <b style="font-size:48px">'+L+'</b> 의 소문자는?',l,w,{sp:[['대문자 '+L+'의 소문자는?','ko']],noChoiceRead:true});}
  return mk(r,'eng','alpha','소문자 <b style="font-size:48px">'+l+'</b> 의 대문자는?',L,(conf[l]||[]).map(function(x){return x.toUpperCase();}).concat(letters(r,L,3,false)),{sp:[['소문자 '+l+'의 대문자는?','ko']],noChoiceRead:true});};
 G.eng.phonics=function(r,lv){var types=lv<=2?['first','first','start']:['first','start','cvc','cvc'];if(lv<=1)types=['first'];var t=pick(r,types);var pool=ewPool(lv).filter(function(w){return w[1].indexOf(' ')<0;});
- if(t==='first'){var w=pick(r,pool);var f=w[1][0];return mk(r,'eng','phonics','<div class="pic">'+w[0]+'</div><b style="letter-spacing:2px">_'+w[1].slice(1)+'</b> ('+w[2]+')<br>빈칸에 들어갈 첫 글자는?',f,letters(r,f,3,true),{sp:[['잘 듣고 첫 글자를 골라 보세요.','ko'],[w[1],'en'],[w[1],'en']],noChoiceRead:true});}
+ if(t==='first'){var w=pick(r,pool);var f=w[1][0];return mk(r,'eng','phonics','<div class="pic">'+w[0]+'</div><b style="letter-spacing:2px"><i class="bx"></i>'+w[1].slice(1)+'</b> ('+w[2]+')<br>빈칸에 들어갈 첫 글자는?',f,letters(r,f,3,true),{sp:[['잘 듣고 첫 글자를 골라 보세요.','ko'],[w[1],'en'],[w[1],'en']],noChoiceRead:true});}
  if(t==='start'){var L=pick(r,uniq(pool.map(function(w){return w[1][0];})));var good=pick(r,pool.filter(function(w){return w[1][0]===L;}));var bad=shuffle(r,pool.filter(function(w){return w[1][0]!==L;})).slice(0,3);return mk(r,'eng','phonics','<b style="font-size:40px">'+L.toUpperCase()+' '+L+'</b> 로 시작하는 낱말은?',good[0]+' '+good[1],bad.map(function(w){return w[0]+' '+w[1];}),{sp:[[L.toUpperCase(),'en'],['로 시작하는 낱말을 고르세요.','ko']],chLang:'en'});}
- var c=pick(r,CVC);var v=c[0][1];return mk(r,'eng','phonics','<div class="pic">'+c[1]+'</div><b style="font-size:40px;letter-spacing:4px">'+c[0][0]+' _ '+c[0][2]+'</b><br>잘 듣고 가운데 들어갈 모음을 고르세요.',v,['a','e','i','o','u'].filter(function(x){return x!==v;}),{sp:[['잘 듣고 가운데 모음을 골라 보세요.','ko'],[c[0],'en'],[c[0],'en']],noChoiceRead:true});};
+ var c=pick(r,CVC);var v=c[0][1];return mk(r,'eng','phonics','<div class="pic">'+c[1]+'</div><b style="font-size:40px;letter-spacing:4px">'+c[0][0]+' <i class="bx"></i> '+c[0][2]+'</b><br>잘 듣고 가운데 들어갈 모음을 고르세요.',v,['a','e','i','o','u'].filter(function(x){return x!==v;}),{sp:[['잘 듣고 가운데 모음을 골라 보세요.','ko'],[c[0],'en'],[c[0],'en']],noChoiceRead:true});};
 G.eng.listen=function(r,lv){var types=lv===0?['word','word']:lv<=2?['word','word','num']:['word','num','sent','sent'];var t=pick(r,types);var pool=ewPool(lv);
  if(t==='num'){var n=ri(r,1,lv>=3?12:10);var w=shuffle(r,[1,2,3,4,5,6,7,8,9,10].filter(function(x){return x!==n;})).slice(0,3).map(String);return mk(r,'eng','listen','<div class="pic">🔊</div>잘 듣고 알맞은 숫자를 고르세요.',String(n),w,{sp:[['잘 듣고 알맞은 숫자를 고르세요.','ko'],[NUMW[n],'en'],[NUMW[n],'en']],alt:'<b>'+NUMW[n]+'</b> 은(는) 어떤 숫자일까요?',noChoiceRead:true,big:true});}
  var x=pick(r,pool);var wr=shuffle(r,pool.filter(function(y){return y!==x;})).slice(0,3).map(function(y){return y[0];});
@@ -1097,7 +1098,7 @@ MG.pgraph=function(r){var P=[['가 마을'],['나 마을'],['다 마을'],['라 
 MG.more=function(r){var e1=pick(r,['🍎','🐶','⭐','🚗']),e2=pick(r,['🍌','🐱','🌙','🚌']);var a=ri(r,1,7),b;do{b=ri(r,1,7);}while(b===a);var more=r()<.6;var ans=(more?a>b:a<b)?'가':'나';return mk(r,'math','count','<div class="emo" style="text-align:left;font-size:30px">가: '+emos(e1,a)+'<br>나: '+emos(e2,b)+'</div>어느 쪽이 더 <b>'+(more?'많을까요':'적을까요')+'</b>?',ans,[ans==='가'?'나':'가','똑같아요'],{explain:'하나씩 짝을 지어 보면 남는 쪽이 더 많아요. 가는 '+a+'개, 나는 '+b+'개 → '+ans+'가 더 '+(more?'많아요':'적어요')+'.'});};
 /* 국어 낱말 문제(유형 고정) */
 var KG={};
-KG.ono=function(r){var o=pick(r,ONO);return mk(r,'kor','vocab','( )에 알맞은 흉내 내는 말은?<div class="passage" style="margin-top:10px">'+o[0]+'</div>',o[1],shuffle(r,ONO.filter(function(x){return x!==o;}).map(function(x){return x[1];})),{explain:'소리를 흉내 내는 말(멍멍, 쨍그랑)과 모양을 흉내 내는 말(엉금엉금, 반짝반짝)을 넣으면 글이 생생해져요.'});};
+KG.ono=function(r){var o=pick(r,ONO);return mk(r,'kor','vocab','빈칸에 알맞은 흉내 내는 말은?<div class="passage" style="margin-top:10px">'+o[0]+'</div>',o[1],shuffle(r,ONO.filter(function(x){return x!==o;}).map(function(x){return x[1];})),{explain:'소리를 흉내 내는 말(멍멍, 쨍그랑)과 모양을 흉내 내는 말(엉금엉금, 반짝반짝)을 넣으면 글이 생생해져요.'});};
 KG.ant=function(r,lv){var pool=ANT.filter(function(x){return x[2]<=lv;});if(!pool.length)pool=ANT;var p=pick(r,pool);var rev=r()<.5;var a=rev?p[1]:p[0],b=rev?p[0]:p[1];return mk(r,'kor','vocab','「<b>'+a+'</b>」의 반대말은 무엇일까요?',b,shuffle(r,ANT.filter(function(x){return x!==p;}).map(function(x){return x[r()<.5?0:1];})),{explain:'「'+a+'」와 「'+b+'」는 뜻이 서로 반대예요.'});};
 KG.syn=function(r,lv){var sp=SYN.filter(function(x){return x[2]<=lv;});if(!sp.length)return KG.ant(r,lv);var y=pick(r,sp);return mk(r,'kor','vocab','「<b>'+y[0]+'</b>」와 뜻이 비슷한 말은?',y[1],shuffle(r,SYN.filter(function(x){return x!==y;}).map(function(x){return x[1];}).concat(ANT.map(function(x){return x[1];}))),{explain:'「'+y[0]+'」 자리에 「'+y[1]+'」을(를) 넣어도 뜻이 거의 같아요.'});};
 KG.cat=function(r){var g=pick(r,CATG);var other=pick(r,CATG.filter(function(x){return x!==g;}));var odd=pick(r,other[1].filter(function(z){return g[1].indexOf(z)<0;}));if(r()<.5)return mk(r,'kor','vocab','다음 중 <b>'+jo(g[0],'이','가')+'</b> 아닌 것은?',odd,shuffle(r,g[1]).slice(0,3),{explain:odd+'은(는) '+other[0]+'에 들어가요. 나머지는 모두 '+g[0]+'예요.'});var one=pick(r,g[1]);return mk(r,'kor','vocab','「'+shuffle(r,g[1].filter(function(z){return z!==one;})).slice(0,3).join(', ')+'」을(를) 모두 묶어 부르는 말은?',g[0],shuffle(r,CATG.filter(function(x){return x!==g;}).map(function(x){return x[0];})),{explain:'여러 낱말을 한꺼번에 부르는 말을 「무리 짓는 말」이라고 해요.'});};
@@ -1113,9 +1114,9 @@ function engWord(r,lv,ws,learned){var L=ewList(ws);var x=pick(r,L);var pool=L.le
  if(t==='pic')return mk(r,'eng','vocab','<div class="pic">'+x[0]+'</div>그림에 알맞은 영어 낱말은?',w,oth.slice(0,3).map(function(y){return y[1];}),{sp:[['그림에 알맞은 영어 낱말을 고르세요.','ko']],chLang:'en',explain:ex});
  if(t==='mean')return mk(r,'eng','vocab','<b style="font-size:36px">'+w+'</b> 의 뜻은?',x[2],oth.slice(0,3).map(function(y){return y[2];}),{sp:[[w,'en'],['의 뜻은 무엇일까요?','ko']],explain:ex});
  if(t==='ko2en')return mk(r,'eng','vocab','「<b>'+x[2]+'</b>」을(를) 영어로 하면?',w,oth.slice(0,3).map(function(y){return y[1];}),{sp:[[x[2]+'을 영어로 하면?','ko']],chLang:'en',explain:ex});
- if(t==='first'){var f=w[0];return mk(r,'eng','phonics','<div class="pic">'+x[0]+'</div><b style="font-size:34px;letter-spacing:3px">_'+w.slice(1)+'</b><br>첫 글자는 무엇일까요?',f,letters(r,f,3,true),{sp:[['잘 듣고 첫 글자를 골라 보세요.','ko'],[w,'en'],[w,'en']],noChoiceRead:true,big:true,explain:ex+' — 첫소리 「'+f+'」'});}
+ if(t==='first'){var f=w[0];return mk(r,'eng','phonics','<div class="pic">'+x[0]+'</div><b style="font-size:34px;letter-spacing:3px"><i class="bx"></i>'+w.slice(1)+'</b><br>첫 글자는 무엇일까요?',f,letters(r,f,3,true),{sp:[['잘 듣고 첫 글자를 골라 보세요.','ko'],[w,'en'],[w,'en']],noChoiceRead:true,big:true,explain:ex+' — 첫소리 「'+f+'」'});}
  if(t==='spell'){var bad=[];var tries=0;while(bad.length<3&&tries<30){tries++;var b2=w.split('');var k=ri(r,0,b2.length-1);var op=ri(r,0,2);if(op===0&&b2.length>2){var j=Math.min(b2.length-1,k+1);var tm=b2[k];b2[k]=b2[j];b2[j]=tm;}else if(op===1&&b2.length>3){b2.splice(k,1);}else{b2[k]=VOW.indexOf(b2[k])>=0?pick(r,VOW.replace(b2[k],'').split('')):pick(r,'bcdfgklmnprst'.replace(b2[k],'').split(''));}var bw=b2.join('');if(bw!==w&&bad.indexOf(bw)<0)bad.push(bw);}return mk(r,'eng','phonics','<div class="pic">'+x[0]+'</div>철자가 <b>바른</b> 낱말은?',w,bad,{sp:[['그림을 보고 철자가 바른 낱말을 고르세요.','ko'],[w,'en']],chLang:'en',noChoiceRead:true,explain:ex+' — 철자: '+w.split('').join('-')});}
- var two=lv>=3&&w.length>=4&&r()<.5;var pos=ri(r,0,w.length-(two?2:1));var ans=w.substr(pos,two?2:1);var shown=w.split('').map(function(c,i){return(i>=pos&&i<pos+(two?2:1))?'<u>_</u>':c;}).join(' ');var wr=[];var tries2=0;while(wr.length<3&&tries2<40){tries2++;var cand='';for(var q=0;q<ans.length;q++){var c0=ans[q];cand+=(VOW.indexOf(c0)>=0&&r()<.7)?pick(r,VOW.split('')):pick(r,'abcdefghiklmnoprstuw'.split(''));}if(cand!==ans&&wr.indexOf(cand)<0)wr.push(cand);}
+ var two=lv>=3&&w.length>=4&&r()<.5;var pos=ri(r,0,w.length-(two?2:1));var ans=w.substr(pos,two?2:1);var shown=w.split('').map(function(c,i){return(i>=pos&&i<pos+(two?2:1))?'<i class="bx"></i>':c;}).join(' ');var wr=[];var tries2=0;while(wr.length<3&&tries2<40){tries2++;var cand='';for(var q=0;q<ans.length;q++){var c0=ans[q];cand+=(VOW.indexOf(c0)>=0&&r()<.7)?pick(r,VOW.split('')):pick(r,'abcdefghiklmnoprstuw'.split(''));}if(cand!==ans&&wr.indexOf(cand)<0)wr.push(cand);}
  return mk(r,'eng','phonics','<div class="pic">'+x[0]+'</div><b style="font-size:34px;letter-spacing:2px">'+shown+'</b><br>가려진 글자는 무엇일까요?',ans,wr,{sp:[['잘 듣고 가려진 글자를 골라 보세요.','ko'],[w,'en'],[w,'en']],noChoiceRead:true,big:true,explain:ex+' — 철자: '+w.split('').join('-')});}
 function engAlpha(r,lv,lets){var L=pick(r,lets.split(''));var t=pick(r,['hear','hear','case','order']);if(t==='hear'){var low=lv>=2&&r()<.5;var c=low?L.toLowerCase():L;return mk(r,'eng','alpha','<div class="pic">🔊</div>소리를 잘 듣고 알맞은 알파벳을 고르세요.',c,shuffle(r,lets.split('').filter(function(x){return x!==L;})).slice(0,3).map(function(x){return low?x.toLowerCase():x;}),{sp:[['소리를 잘 듣고 알맞은 알파벳을 고르세요.','ko'],[L,'en'],[L,'en']],alt:'「<b>'+LETTER_KO[L]+'</b>」는 어떤 알파벳일까요?',noChoiceRead:true,big:true,explain:L+' '+L.toLowerCase()+' — 「'+LETTER_KO[L]+'」'});}
  if(t==='order'){var i=ABC.indexOf(L);if(i<1)i=1;if(i>24)i=24;var seq=ABC.slice(i-1,i+2);var ans=seq[1];return mk(r,'eng','alpha','<div class="seq">'+seq[0]+' ❓ '+seq[2]+'</div>❓에 들어갈 알파벳은?',ans,shuffle(r,ABC.filter(function(x){return seq.indexOf(x)<0;})).slice(0,3),{sp:[['물음표에 들어갈 알파벳을 고르세요.','ko']],noChoiceRead:true,explain:seq.join(' - ')+' 순서예요.'});}
@@ -1566,7 +1567,7 @@ function render(){MOVE=null;var app=document.getElementById('app');var body;if(P
  if(V.view==='run'&&RUN&&autoOn(RUN.cid)&&!MODAL){var key=RUN.phase==='q'?'q'+RUN.i+(RUN.fu?'-'+RUN.fu.j:''):'p';if(RUN.spoken!==key){RUN.spoken=key;var R0=RUN;setTimeout(function(){if(RUN!==R0)return;if(R0.phase==='q')say(qSpeech(curQ(R0)));else say(R0.prompt);},300);}}
  if(V.view==='score'&&V.sc&&!V.sc.spoken&&!MODAL){V.sc.spoken=1;var sc0=V.sc,g0=gradeOf(sc0.pct);setTimeout(function(){if(V.sc===sc0)say(g0[1]+' '+sc0.pct+'점! '+g0[2]);},600);}
  if(V.view==='lesson'&&!MODAL&&autoOn(V.cid)){var lk=V.cid+'|'+V.s+'|'+today();if(LSPOKEN!==lk){LSPOKEN=lk;var c0=child(V.cid),L0=lessonsFor(V.s,lvIdx(c0.level));if(L0.length){var ls0=L0[todayLi(c0,V.s)];setTimeout(function(){if(V.view==='lesson')say(lessonSpeech(ls0,V.s));},400);}}}
- app.innerHTML=topbar()+'<main>'+body+'</main><div class="foot">아빠의 비밀 보물섬 · 가정용 학습 도우미 (학교 공식 평가를 대신하지 않아요) · <span id="ver">버전 2026.11.17-2</span></div>'+modalHtml();renderToast();if(MOVE){var mv=MOVE;MOVE=null;setTimeout(function(){var el=document.getElementById('me');if(el){el.style.transition='left 1.6s ease-in-out, top 1.6s ease-in-out';el.style.left=mv.x+'%';el.style.top=mv.y+'%';}},350);}}
+ app.innerHTML=topbar()+'<main>'+body+'</main><div class="foot">아빠의 비밀 보물섬 · 가정용 학습 도우미 (학교 공식 평가를 대신하지 않아요) · <span id="ver">버전 2026.11.17-3</span></div>'+modalHtml();renderToast();if(MOVE){var mv=MOVE;MOVE=null;setTimeout(function(){var el=document.getElementById('me');if(el){el.style.transition='left 1.6s ease-in-out, top 1.6s ease-in-out';el.style.left=mv.x+'%';el.style.top=mv.y+'%';}},350);}}
 
 /* ---------- 동작 ---------- */
 function startRun(mode,subj){var c=child(V.cid);if(!c)return;var lv=lvIdx(c.level);var qs,prompt,n=0;if(mode==='diag'){qs=buildDiag(c,subj);prompt=EXPRESS[lv];}else{var d=((S.daily[c.id]||{})[today()]||{})[subj];n=d?(d.n||1):0;qs=buildDaily(c,subj,n);var grp=PROMPTS[promptGroup(lv)];prompt=grp[hashStr(c.id+today()+n)%grp.length];}
