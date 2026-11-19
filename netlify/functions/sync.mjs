@@ -15,6 +15,12 @@ export default async (req) => {
   const store = getStore("bomulseom-family");
 
   if (req.method === "GET") {
+    // m=1: 저장 시각만 돌려줘서 데이터 전송량(크레딧)을 아껴요
+    if (new URL(req.url).searchParams.get("m") === "1") {
+      const meta = await store.getMetadata(key, { consistency: "strong" });
+      if (meta && meta.metadata && meta.metadata.updated != null) return json({ updated: meta.metadata.updated });
+      if (!meta) return json({ updated: null });
+    }
     const data = await store.get(key, { type: "json", consistency: "strong" });
     return json({ data: data || null });
   }
@@ -27,7 +33,7 @@ export default async (req) => {
     if (!data || !Array.isArray(data.children)) return json({ error: "bad data" }, 400);
     const cur = await store.get(key, { type: "json", consistency: "strong" });
     if (cur && (cur.updated || 0) > (data.updated || 0)) return json({ ok: false, stale: true, data: cur });
-    await store.setJSON(key, data);
+    await store.setJSON(key, data, { metadata: { updated: data.updated || 0 } });
     return json({ ok: true, updated: data.updated || 0 });
   }
 
